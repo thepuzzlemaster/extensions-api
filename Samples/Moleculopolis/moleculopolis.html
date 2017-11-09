@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Moleculopolis - molecular rendering</title>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    
+    <!-- NGL Molecular viewer -->
+    <script src="https://cdn.rawgit.com/arose/ngl/v0.10.0-dev.20/dist/ngl.js"></script>
+   
+    <!-- Extensions Library (this will be hosted on a CDN eventually) -->
+    <script src="../../lib/tableau-extensions-0.6.1.js"></script>
+
+    <!-- Our extensions's code -->
+    <script src="./moleculopolis.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Filters Table -->
+      <div id="filters">
+        <h4>Current Filters</h4>
+        <div class="table-responsive">
+          <table id="loading" class="table">
+            <tbody><tr><td>Loading...</td></tr></tbody>
+          </table>     
+          <table id="filtersTable" class="table table-striped hidden">
+            <thead>
+              <tr>
+                <th>Filtered Field</th>
+                <th>Filtered Worksheet</th>
+                <th>Filter Type</th>
+                <th style="width: 100%">Current Values</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+          <table id="noFiltersWarning" class="table bg-danger hidden">
+            <tbody><tr><td>There are no filters currently active in this dashboard.</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- New Settings Submission Form -->
+      <div id="filterActions">
+        <button id="clear" type="button" class="btn btn-primary">Clear All</button>
+      </div>
+    </div>
+  </body>
+</html>
